@@ -1,0 +1,2 @@
+module BarsearchesHelper
+end
