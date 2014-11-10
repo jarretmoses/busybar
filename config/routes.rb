@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bars/:id', to: 'bars#show', as: 'bars'
+
   # get 'barsearches/results'
 
   root 'barsearches#index'
