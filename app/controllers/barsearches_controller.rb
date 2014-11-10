@@ -15,8 +15,7 @@ class BarsearchesController < ApplicationController
   
     def format_bars(bars)
       bars.collect do |bar|
-        binding.pry
-        {name: bar[:name], address: bar[:location][:address], checkinsCount: bar[:stats]['checkinsCount'], usersCount: bar[:stats]['usersCount'], cat_id: bar[:categories][0].to_h['id']}
+        {venue_id: bar[:id], name: bar[:name], address: bar[:location][:address], checkinsCount: bar[:stats]['checkinsCount'], usersCount: bar[:stats]['usersCount'], cat_id: bar[:categories][0].to_h['id'], url: bar[:url], here_now: bar[:hereNow][:count]}
       end
     end
 
