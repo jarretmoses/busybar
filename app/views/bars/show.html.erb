@@ -1,23 +1,27 @@
-<h3><%= @bar.name %></h3>
-<h4><%= @bar.address %></h4>
 
 <a href=<%= @bar.url %> target='_blank'>Visit My Webpage</a><br>
 <br>
 
-<table border='1'>
-  <tr>
-    <th>Check Ins</th>
-    <td><%= @bar.checkinsCount %></td>
-  </tr>
-  <tr>
-    <th>Unique User Checkins</th>
-    <td><%= @bar.usersCount %></td>
-  </tr>
-  <tr>
-    <th>Here Now</th>
-    <td><%= @bar.here_now %></td>
-  </tr>
-</table>
+<div id="results">
+  <h4 style="text-align:center"><%= @bar.name %></h4>
+  <h5 style="text-align:center"><%= @bar.address %></h5>
+  <div class="bs-component">
+    <table class ="table table-striped table-hover">
+      <tr>
+        <th>Check Ins</th>
+        <td><%= @bar.checkinsCount %></td>
+      </tr>
+      <tr>
+        <th>Unique User Checkins</th>
+        <td><%= @bar.usersCount %></td>
+      </tr>
+      <tr>
+        <th>Here Now</th>
+        <td><%= @bar.here_now %></td>
+      </tr>
+    </table>
+  </div>  
+</div>
 
 
 
