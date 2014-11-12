@@ -1,6 +1,6 @@
 <div class="jumbotron">
     <h1>BUSY BAR</h1>
-      <%= form_tag(results_path) %>
+      <%= form_tag('/results',method: 'get') %>
     <div id='input'>
       <%= collection_select(Category, :bar, Category.all, :name, :name)%><br>
     </div>

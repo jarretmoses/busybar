@@ -2,6 +2,9 @@
   <div class="container-fluid">
     <div class="navbar-header">
     <%= link_to 'Home',root_path, class: "navbar-brand"%>
+    <% if @id %>
+      <%= link_to 'Back', :back, class: "navbar-brand"%>
+    <% end %> 
     </div>
   </div> 
 </div>   

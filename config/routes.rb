@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'barsearches/results'
 
   root 'barsearches#index'
-  post '/results', to: 'barsearches#results'
+  get '/results', to: 'barsearches#results'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
