@@ -12,7 +12,7 @@ class BarsearchesController < ApplicationController
   private
 
     def find_bars(client)
-      client.search_venues(:near => "Lower East Side",radius: 5000, :intent => 'browse', :query=> @category.name, :categoryID => @category.cat_id)['venues']
+      client.search_venues(:near => "Lower East Side",radius: 3000, :intent => 'browse', :query=> @category.name, :categoryID => @category.cat_id)['venues']
     end
   
     def format_bars(bars)
