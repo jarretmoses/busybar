@@ -1,8 +1,10 @@
 class BarsearchesController < ApplicationController 
   def index
+
   end
 
   def results
+    @category = Category.find_by(name: params['Category']['bar'])
     @results = all(@foursquare)
     @bars = Bar.create_from_array(@results)
   end
@@ -10,7 +12,7 @@ class BarsearchesController < ApplicationController
   private
 
     def find_bars(client)
-      client.search_venues(:near => "Lower East Side",radius: 3000, :intent => 'browse', :query=> 'pub', :categoryID => '4bf58dd8d48988d11b941735')['venues']
+      client.search_venues(:near => "Lower East Side",radius: 5000, :intent => 'browse', :query=> @category.name, :categoryID => @category.cat_id)['venues']
     end
   
     def format_bars(bars)
@@ -20,7 +22,7 @@ class BarsearchesController < ApplicationController
     end
 
     def parse_bars(bars)
-      bars.select { |bar| bar[:cat_id] == '4bf58dd8d48988d11b941735' }
+      bars.select { |bar| bar[:cat_id] == @category.cat_id }
     end
 
     def sort_bars(bars)
