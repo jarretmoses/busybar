@@ -1,7 +1,9 @@
 <div class="jumbotron">
+  <div id="alert">
  <% if flash[:notice] %>
     <div class="alert alert-warning"><%= flash[:notice] %></div>
  <% end %>
+ </div>
 
     <h1>BUSY BAR</h1>
       <%= form_tag('/results',method: 'get') %>

@@ -1,17 +1,3 @@
-<script type="text/javascript">
-  
- $(function(){
-  $('.pic').click(function(){
-    $(this).attr('width', '500');
-    $(this).attr('height', '500');
-  });
-});
- 
-</script>
-
-<a href=<%= @bar.url %> target='_blank'>Visit My Webpage</a><br>
-<br>
-
 <div id="results">
   <h4 style="text-align:center"><%= @bar.name %></h4>
   <h5 style="text-align:center"><%= @bar.address %></h5>
@@ -37,7 +23,7 @@
   <ul id="gallery-nav">
     <li>
       <% @photos.each do |photo| %>
-        <a href="#" class="pic"><img src= <%= photo %> alt=""></a>
+        <a class="inline" href="#" ><img src= <%= photo %> alt=""></a>
       <% end %>
     </li>
   </ul>
