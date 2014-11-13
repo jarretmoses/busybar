@@ -4,15 +4,21 @@ class BarsearchesController < ApplicationController
   end
 
   def results
-    @category = Category.find_by(name: params['Category']['bar'])
-    @results = all(@foursquare)
-    @bars = Bar.create_from_array(@results)
+    if params['Category']['bar'] != "" && params['Location']['near']!= ""
+      @location = Location.find_by(near: params['Location']['near'])
+      @category = Category.find_by(name: params['Category']['bar'])
+      @results = all(@foursquare)
+      @bars = Bar.create_from_array(@results)
+    else
+      flash.now[:notice] = "Please select a bar type and location"
+      render :index
+    end
   end
 
   private
 
     def find_bars(client)
-      client.search_venues(:near => "Lower East Side",radius: 3000, :intent => 'browse', :query=> @category.name, :categoryID => @category.cat_id)['venues']
+      client.search_venues(:near => @location.near + ", New York, NY",radius: 2500, :intent => 'browse', :query=> @category.name, :categoryID => @category.cat_id)['venues']
     end
   
     def format_bars(bars)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112010107) do
+ActiveRecord::Schema.define(version: 20141113004810) do
 
   create_table "bars", force: true do |t|
     t.string   "name"
@@ -20,15 +20,22 @@ ActiveRecord::Schema.define(version: 20141112010107) do
     t.integer  "usersCount"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "cat_id"
-    t.integer  "venue_id"
+    t.string   "cat_id"
+    t.string   "venue_id"
     t.string   "url"
     t.integer  "here_now"
+    t.float    "rating"
   end
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.string   "cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "near"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

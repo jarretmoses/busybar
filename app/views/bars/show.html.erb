@@ -23,5 +23,15 @@
   </div>  
 </div>
 
+<ul class="thumbnails">
+  <li class="span4">
+    <a href="#" class="thumbnail">
+    <% @photos.each do |photo| %>
+      <img src= <%= photo %> alt="">
+    <% end %>
+    </a>
+  </li>
+</ul>
+
 
 
