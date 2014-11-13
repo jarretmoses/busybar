@@ -5,3 +5,41 @@
   text-align: center;
   font-weight: bold;
 }
+
+/*.img-thumbnail {
+  height: auto;
+}*/
+
+/*.img {
+    display: inline;
+    line-height: 1.42857143;
+    width: 100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+.img-thumbnail {
+ padding: 4px;
+ line-height: 1.42857143;
+ background-color: #ffffff ;
+ border: 1px solid #dddddd ;
+ border-radius: 0;
+ -webkit-transition: all 0.2s ease-in-out;
+ -o-transition: all 0.2s ease-in-out;
+ transition: all 0.2s ease-in-out;
+ display: inline-block;
+ max-width: 100%;
+ height: auto;
+}
+
+#photo-box {
+  width: auto;
+  height: 410px;
+  overflow: auto;
+}
+
+ul#gallery-nav { list-style: none; margin-left: 0; }
+ul#gallery-nav li a { display: inline-block; width: 100px; height: 100px; margin-bottom: 20px; overflow: hidden; }
+ul#gallery-nav li a img { border: none; }

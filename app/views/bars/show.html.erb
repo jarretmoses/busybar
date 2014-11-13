@@ -1,3 +1,13 @@
+<script type="text/javascript">
+  
+ $(function(){
+  $('.pic').click(function(){
+    $(this).attr('width', '500');
+    $(this).attr('height', '500');
+  });
+});
+ 
+</script>
 
 <a href=<%= @bar.url %> target='_blank'>Visit My Webpage</a><br>
 <br>
@@ -23,15 +33,18 @@
   </div>  
 </div>
 
-<ul class="thumbnails">
-  <li class="span4">
-    <a href="#" class="thumbnail">
-    <% @photos.each do |photo| %>
-      <img src= <%= photo %> alt="">
-    <% end %>
-    </a>
-  </li>
-</ul>
+<div id="photo-box">
+  <ul id="gallery-nav">
+    <li>
+      <% @photos.each do |photo| %>
+        <a href="#" class="pic"><img src= <%= photo %> alt=""></a>
+      <% end %>
+    </li>
+  </ul>
+</div>
 
 
+
+
+   
 
