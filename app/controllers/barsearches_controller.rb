@@ -9,6 +9,8 @@ class BarsearchesController < ApplicationController
       @category = Category.find_by(name: params['Category']['bar'])
       @results = all(@foursquare)
       @bars = Bar.create_from_array(@results)
+      Bar.get_ratings(@bars,@foursquare)
+
     else
       flash.now[:notice] = "Please select a bar type and location"
       render :index
