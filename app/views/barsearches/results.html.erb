@@ -1,12 +1,21 @@
-
 <div id="results">
   <div class="col-lg-4 results">
     <div class="bs-component">
-    <h3>Busyiest Bars in your selected area</h3>
-      <ol class="list-group list-title">
-        <li class="list-group-item">Busyiest Bars in your selected area</li>
-        <%= render @bars %>
-      </ol>
+        <table class="table table-hover table-bordered">
+        <caption>Your search results for a <%= @category.name %></caption>
+          <thead>
+            <th>Name</th>
+            <th>Check-Ins</th>
+            <th>Rating</th>
+          </thead>
+          <%= render @bars %>
+        </table>
     </div>
   </div>
 </div>
+
+<div id="sort">
+  <%= button_tag 'Sort by Rating' %>
+</div>
+
+

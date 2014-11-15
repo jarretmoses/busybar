@@ -1,4 +1,10 @@
-<li class="list-group-item">
+<!-- <li class="list-group-item">
   <span class="badge"><%= bar.rating %></span>
   <%= link_to bar.name, bars_path(bar) %>
 </li>
+ -->
+<tr class="data">
+  <td class="bar_name"><%= link_to bar.name, bars_path(bar) %></td>
+  <td class ="checkins" data-checkins = <%= bar.checkinsCount %>><%= bar.checkinsCount %></td>
+  <td class="rating" data-rating = <%= bar.rating %>><%= bar.rating %></td>
+</tr>

@@ -23,9 +23,13 @@ class Bar < ActiveRecord::Base
 
   def update_rating(client)
     rating = client.venue(self.venue_id)["rating"]
-    if rating != self.rating
-      self.rating = rating 
+    if rating == nil
+      self.rating = 0.0
       self.save
+    elsif rating != self.rating
+      self.rating = rating
+      self.save
+    else
     end
   end
 
