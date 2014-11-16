@@ -4,7 +4,6 @@ $(function(){
   sorter.init();
 });
 
-
 function Sorter(){
   this.$button = $('button');
   this.$table = $('tbody');
@@ -16,7 +15,7 @@ Sorter.prototype.init = function(){
 };
 
 Sorter.prototype.setListener = function(){
-  //eevnt handler for button
+  //eve nt handler for button
   var self = this;
   this.$button.click(function(event){
     event.preventDefault();

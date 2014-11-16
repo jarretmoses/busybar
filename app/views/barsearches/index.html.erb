@@ -11,7 +11,7 @@
       <%= collection_select(Category, :bar, Category.all.sort_by{|bar| bar.name}, :name, :name,:include_blank => "Please select bar type")%>
       <%= collection_select(Location, :near, Location.all.sort_by{|loc| loc.near}, :near, :near, :include_blank => "Please select a location") %>
     </div>
-      <%= submit_tag 'Find Bars!' %>
+    <%= submit_tag 'Find Bars!' %>
 </div>
 
 
