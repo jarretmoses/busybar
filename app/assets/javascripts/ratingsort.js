@@ -1,21 +1,21 @@
 'use strict';
 $(function(){
-  var sorter = new Sort();
+  var sorter = new Sorter();
   sorter.init();
 });
 
 
-function Sort(){
+function Sorter(){
   this.$button = $('button');
   this.$table = $('tbody');
   this.$rows = $('.data');
 };
 
-Sort.prototype.init = function(){
+Sorter.prototype.init = function(){
   this.setListener();
 };
 
-Sort.prototype.setListener = function(){
+Sorter.prototype.setListener = function(){
   //eevnt handler for button
   var self = this;
   this.$button.click(function(event){
@@ -32,7 +32,7 @@ Sort.prototype.setListener = function(){
   });
 };
 
-Sort.prototype.sort = function(type){
+Sorter.prototype.sort = function(type){
   //sort rows by specified table data
   var sorted = _.sortBy(this.$rows,function(row){
         return $(row).children(type)
@@ -44,6 +44,6 @@ Sort.prototype.sort = function(type){
    }.bind(this));
 };
 
-Sort.prototype.changeButton = function(text){
+Sorter.prototype.changeButton = function(text){
   this.$button.text('Sort By '+ text);
 };
