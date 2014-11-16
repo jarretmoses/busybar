@@ -15,19 +15,29 @@
         <th>Here Now</th>
         <td><%= @bar.here_now %></td>
       </tr>
+      <% if @bar.url %>
+      <tr>
+        <th>Website</th>
+        <td><a href=<%= @bar.url %> target="_blank"><%= @bar.url %></a></td>
+      </tr>
+      <% end %>
     </table>
   </div>  
 </div>
 
-<div id="photo-box">
-  <ul id="gallery-nav">
-    <li>
-      <% @photos.each do |photo| %>
-        <a class="inline" href="#" ><img src= <%= photo %> alt=""></a>
-      <% end %>
-    </li>
-  </ul>
-</div>
+ <div id="photo-box">
+  <% @photos.each do |photo| %>
+      <a class="fancybox" rel="group" href=<%= photo[:large] %>><img src= <%= photo[:small] %> alt=""></a>
+  <% end %>
+</div> 
+
+<!-- Initialize fancy box after page laod -->
+<script type="text/javascript">
+  $(function(){
+    $(".fancybox").fancybox();
+  });
+</script>
+
 
 
 

@@ -17,7 +17,9 @@ class Bar < ActiveRecord::Base
     photo_ids.map do |photo|
       pre = photo[:prefix]
       post = photo[:suffix]
-      pre + 'width200' + post
+      small = pre + 'width120' + post
+      large = pre + 'width480' + post
+      {small: small, large: large}
     end
   end
 
