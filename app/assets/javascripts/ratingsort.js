@@ -2,7 +2,6 @@
 $(function(){
   var sorter = new Sort();
   sorter.init();
-  $(".fancybox").fancybox();
 });
 
 
@@ -36,7 +35,8 @@ Sort.prototype.setListener = function(){
 Sort.prototype.sort = function(type){
   //sort rows by specified table data
   var sorted = _.sortBy(this.$rows,function(row){
-        return $(row).children(type).data(type.replace('.',''));
+        return $(row).children(type)
+            .data(type.replace('.',''));
       }).reverse(); 
     //append newly sorted rows to table
     _.each(sorted,function(row){
