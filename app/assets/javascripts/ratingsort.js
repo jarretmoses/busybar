@@ -2,6 +2,7 @@
 $(function(){
   var sorter = new Sort();
   sorter.init();
+  $(".fancybox").fancybox();
 });
 
 
