@@ -1,19 +1,16 @@
-
+<div class="jumbotron">
     <div id="alert">
      <% if flash[:notice] %>
         <div class="alert alert-warning"><%= flash[:notice] %></div>
      <% end %>
      </div>
-   <h1>BUSY BAR</h1>
-
- <div class="container">
-  <div id="custom_form" >
+<div class="container">
     <%= form_tag('/results',{method: 'get', :class => 'form-inline'}) %> 
     <div id="button">
       <%= submit_tag 'Find Bars!', {:class=> "btn btn-default btn-lg"} %><br><br>
     </div>
-      <%= collection_select(Category, :bar, Category.all.sort_by{|bar| bar.name}, :name, :name,{:include_blank => "Please select bar type"},{class: "form-control input-lg"})%>
-      <%= collection_select(Location, :near, Location.all.sort_by{|loc| loc.near}, :near, :near,{:include_blank => "Please select a location"},{class: "form-control input-lg"}) %>
+      <%= collection_select(Category, :bar, Category.all.sort_by{|bar| bar.name}, :name, :name,{:include_blank => "Please select bar type"})%>
+      <%= collection_select(Location, :near, Location.all.sort_by{|loc| loc.near}, :near, :near,{:include_blank => "Please select a location"}) %>
     </div>
 </div>
 

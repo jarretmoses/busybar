@@ -1,26 +1,25 @@
 // Place all the styles related to the bars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .list-group-item:first-child{
   text-align: center;
   font-weight: bold;
 }
 #results{
   padding: 50px;
+  font-family: 'Architects Daughter', cursive;
 }
-/*.img-thumbnail {
-  height: auto;
-}*/
 
-/*.img {
-    display: inline;
-    line-height: 1.42857143;
-    width: 100px;
-    height: 100px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
+.img {
+  display: inline;
+  line-height: 1.42857143;
+  width: 100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .img-thumbnail {
  padding: 4px;

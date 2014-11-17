@@ -15,15 +15,14 @@
 }
 
 .btn {
+  opacity: 0.9;
 color: #000;
-background-color: #5bc0de;
+background-color: #aaa;
 border-color: #46b8da;
 }
 
-#custom_form{
- margin-left: 300px;
-}
 
+/*
 #Category_bar, #Location_near {
   font-size: 20px;
 }
@@ -32,9 +31,23 @@ border-color: #46b8da;
   width: 60%;
   margin: 0 auto;
   padding: 0;
-}
+}*/
 
-body{ 
+body { 
   background-image: image-url('city.jpg'); 
 }
+
+.jumbotron {
+font-family: 'Architects Daughter', cursive;
+ opacity: 0.8;
+ width: 500px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 100px;
+ border-radius: 25px;
+ background-image: image-url('background.jpg');
+ z-index:1;
+}
+
 
