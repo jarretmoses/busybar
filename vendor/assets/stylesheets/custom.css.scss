@@ -132,6 +132,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+  margin-top: 9px;
 }
 button[disabled],
 html input[disabled] {
@@ -2052,7 +2053,7 @@ table {
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #999999;
+  color: #666;
   text-align: left;
 }
 th {
