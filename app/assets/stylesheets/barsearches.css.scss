@@ -15,30 +15,31 @@
 }
 
 .btn {
-  opacity: 0.9;
+opacity: 0.9;
 color: #000;
 background-color: #aaa;
 border-color: #46b8da;
 }
 
 
-/*
+
 #Category_bar, #Location_near {
-  font-size: 20px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 17px;
 }
 
 #button{
   width: 60%;
   margin: 0 auto;
   padding: 0;
-}*/
+}
 
 body { 
   background-image: image-url('city.jpg'); 
 }
 
 .jumbotron {
-font-family: 'Architects Daughter', cursive;
+ font-family: 'Architects Daughter', cursive;
  opacity: 0.8;
  width: 500px;
  display: block;
