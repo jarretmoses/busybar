@@ -41,6 +41,17 @@
   margin: 0 auto;
   overflow: auto;
 }
+#latitude {
+font-family: 'Architects Daughter', cursive;
+}
+#longitude {
+font-family: 'Architects Daughter', cursive;
+}
+
+#map_canvas {
+    width: 500px;
+    height: 400px;
+}
 
 ul#gallery-nav { list-style: none; margin-left: 0; }
 ul#gallery-nav li a { display: inline-block; width: 100px; height: 100px; margin-bottom: 20px; overflow: hidden; }
