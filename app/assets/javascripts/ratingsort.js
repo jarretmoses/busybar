@@ -15,16 +15,16 @@ Sorter.prototype.init = function(){
 };
 
 Sorter.prototype.setListener = function(){
-  //eve nt handler for button
+  //event handler for button
   var self = this;
   this.$button.click(function(event){
     event.preventDefault();
     if (/rating/i.test($(this).text())){
       self.sort('.rating');
-      self.changeButton('Checkins');
+      self.changeButton('Check-ins');
     } else {
       self.sort('.checkins');
-      self.changeButton('Ratings');
+      self.changeButton('Rating');
     } 
     //remove autofocus on button
     self.$button.blur();
