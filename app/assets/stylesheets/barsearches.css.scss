@@ -66,5 +66,24 @@ caption {
   background-color: #006666 !important;
 }
 
+.table-bordered {
+  margin-top: 10px;
+  background-color: #006666;
+  opacity: 0.7;
+  color: #FFF;
+  thead {
+    background-color: #000;
+  }
+  .data:hover {
+    background-color: #000;
+  };
+}
+
+.bar_name > a{
+  color: #FFF !important;
+  text-decoration: none !important;
+}
+
+
 
 
