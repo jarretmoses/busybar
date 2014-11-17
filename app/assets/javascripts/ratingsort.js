@@ -21,7 +21,7 @@ Sorter.prototype.setListener = function(){
     event.preventDefault();
     if (/rating/i.test($(this).text())){
       self.sort('.rating');
-      self.changeButton('Check-ins');
+      self.changeButton('Check-Ins');
     } else {
       self.sort('.checkins');
       self.changeButton('Rating');
