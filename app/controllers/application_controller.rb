@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   private
     def create_client
       @foursquare = Foursquare2::Client.new(
-        :client_id => 'I4MUTLKEN1MJOIUVCVAJWNVHORGNWL2O0MNXXTULHQ02PF4V', 
-        :client_secret => 'YGE3QOZCGXUAPH5YGVPYBMG45IAYGNKXGYZFGABFMAECB0ML',
-        :api_version => '20140806'
+        :client_id => ENV["FOURSQUARE_CLIENT_ID"], 
+        :client_secret => ENV["FOURSQUARE_CLIENT_SECRET"],
+        :api_version => ENV["FOURSQUARE_API_VERSION"],
       )
     end
 end

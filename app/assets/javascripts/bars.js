@@ -12,7 +12,6 @@ GMap.prototype.insertMap = function(latitude, longitude){
      zoom: 15,
      mapTypeId: google.maps.MapTypeId.ROADMAP
    }
-   debugger;
    var map = new google.maps.Map(canvas, mapOptions);
    var marker = new google.maps.Marker({
      position: myLatlng,
